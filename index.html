@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <!--header-->
+     <header>
+        <a href="#" class="head1"><p>Domingo Anam</p></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#favorites">Favorites</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+     </header>
+
+     <!--home-->
+     <section class="home" id="home">
+        <div class="home-text">
+            <h4>Hello!</h4>
+            <h1>I'm<br>Anam,<span> Domingo</span></h1>
+            <h3>Hacker</h3>
+            <a href="#" class="btn" onclick="code()">Click here to view my code</a>
+        </div>
+        <div class="carousel">
+            <button class="prev" onclick="prevImage()">&#10094;</button>
+            <img src="img/pic1.jpg" class="active" alt="Profile 1">
+            <img src="img/pic2.jpg" alt="Profile 2">
+            <img src="img/pic3.jpg" alt="Profile 3">
+            <img src="img/pic5.jpg" alt="Profile 3">
+            <img src="img/pic6.jpg" alt="Profile 2">
+            <img src="img/pic7.jpg" alt="Profile 3">
+            <img src="img/pic8.jpg" alt="Profile 2">
+            <img src="img/pic9.jpg" alt="Profile 3">
+            <button class="next" onclick="nextImage()">&#10095;</button>
+        </div> 
+     </section>
+
+     <!--portfolio-->
+     <section class="portfolio" id="portfolio">
+        <div class="portfolio-img">
+            <img src="img/1.png">
+        </div>
+        <div class="portfolio-text">
+            <h2>My Portfolio</h2>
+            <h4>Hi! My name is Domingo Delos Angeles B. Anam and this is my Midterm Project. You can enjoy playing here.</h4>
+            <p>
+                Hello and welcome to my personal space on the web! This website showcases my 
+                portfolio, favorite collections, and personal projects. My mission is to share 
+                my journey in <strong>Integrative Programming</strong>, showcase my skills, 
+                and inspire creativity. This is my <Strong>Function Integrations</Strong>
+            </p>
+            <div class="portfolio-gri">
+                <div class="portfolio-in">
+                    <label>Pick Your Choice</label>
+                    <button onclick="temperatureConverter()">1. Temperature Converter (5 pts)</button>
+                </div>
+                <div class="portfolio-in">
+                    <button onclick="getLongerWord()">2. The Longer Word (5 pts)</button>
+                </div>
+                <div class="portfolio-in">
+                    <button onclick="knowMyBirthstone()">3. Know My Birthstone (7 pts)</button>
+                </div>
+                <div class="portfolio-in">
+                    <button onclick="basicOperators()">4. Basic Operators (7 pts)</button>
+                </div>
+                <div class="portfolio-in">
+                    <button onclick="computeAcceleration()">5. Compute for Acceleration (8 pts)</button>
+                </div>
+            </div>
+
+        </div>
+     </section>
+
+    <!--Favorites-->
+
+    <section class="Favorites" id="favorites">
+        <div class="main-text">
+            <h2>My Favorites</h2>
+            <h4>This is my favorites photos.</h4>
+        </div>
+
+        <div class="portfolio-content">
+            <div class="row">
+                <img src="https://eu-images.contentstack.com/v3/assets/blt0bbd1b20253587c0/blt4bf1a4090380d5b0/651579e1a95ca40cf4969a68/00-Divo_BUGATTI.jpg" alt="works1">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>Picture 1</h6>
+                    </div>
+                    <div class="row-icon">
+                        <div class="heart" onclick="toggleLike(this)">
+                            <img src="img/like.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <input type="text" class="comment-box" placeholder="Add a comment...">
+                    <button class="submit-button" onclick="addComment(this)">Post</button>
+                    <ul><li><div class="comments"></div></li></ul>
+                </div>
+                <h3>Sports Car</h3>
+            </div>
+
+            <div class="row">
+                <img src="https://www.motorcyclistonline.com/resizer/5gH3wk1HLF_6GYqWD1YLltEb-sA=/arc-photo-octane/arc3-prod/public/5SOZQO7XS5EP7K2ANVQUFDLR4A.jpg" alt="works2">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>Picture 2</h6>
+                    </div>
+                    <div class="row-icon">
+                        <div class="heart" onclick="toggleLike(this)">
+                            <img src="img/like.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <input type="text" class="comment-box" placeholder="Add a comment...">
+                    <button class="submit-button" onclick="addComment(this)">Post</button>
+                    <ul><li><div class="comments"></div></li></ul>
+                </div>
+                <h3>Sports Bike</h3>
+            </div>
+
+            <div class="row">
+                <img src="https://c4.wallpaperflare.com/wallpaper/217/249/131/lamborghini-aventador-sports-car-cool-black-car-wallpaper-preview.jpg" alt="works3">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>Picture 3</h6>
+                    </div>
+                    <div class="row-icon">
+                        <div class="heart" onclick="toggleLike(this)">
+                            <img src="img/like.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <input type="text" class="comment-box" placeholder="Add a comment...">
+                    <button class="submit-button" onclick="addComment(this)">Post</button>
+                    <ul><li><div class="comments"></div></li></ul>
+                </div>
+                <h3>Sports Car</h3>
+            </div>
+            
+            <div class="row">
+                <img src="https://i.pinimg.com/474x/6f/6a/d0/6f6ad001002fb87c52d724656e2fe5cf.jpg" alt="works4">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>Picture 4</h6>
+                    </div>
+                    <div class="row-icon">
+                        <div class="heart" onclick="toggleLike(this)">
+                            <img src="img/like.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <input type="text" class="comment-box" placeholder="Add a comment...">
+                    <button class="submit-button" onclick="addComment(this)">Post</button>
+                    <ul><li><div class="comments"></div></li></ul>
+                </div>
+                <h3>Sports Bike & Car</h3>
+            </div>
+
+            <div class="row">
+                <img src="https://i.ytimg.com/vi/8ePEUTwBaBY/maxresdefault.jpg" alt="works5">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>Picture 5</h6>
+                    </div>
+                    <div class="row-icon">
+                        <div class="heart" onclick="toggleLike(this)">
+                            <img src="img/like.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <input type="text" class="comment-box" placeholder="Add a comment...">
+                    <button class="submit-button" onclick="addComment(this)">Post</button>
+                    <ul><li><div class="comments"></div></li></ul>
+                </div>
+                <h3>Sports Car</h3>
+            </div>
+
+            <div class="row">
+                <img src="https://www.webbikeworld.com/wp-content/uploads/2023/06/the_future_of_sportsbikes_08.jpg" alt="works6">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h6>Picture 6</h6>
+                    </div>
+                    <div class="row-icon">
+                        <div class="heart" onclick="toggleLike(this)">
+                          <img src="img/like.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <input type="text" class="comment-box" placeholder="Add a comment...">
+                    <button class="submit-button" onclick="addComment(this)">Post</button>
+                    <ul><li><div class="comments"></div></li></ul>
+                </div>
+                <h3>Sports Bike</h3>
+            </div>
+        </div>
+    </section>
+
+     <!--contact-->
+     <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contact Me</h2>
+            <h4>Please visit my social media, email or message me.</p>
+            <div class="contact-list">
+                <li><a href="#">Caliongan, Dalaguete, Cebu</a></li>
+                <li><a href="#">silentanam@gmail.com</a></li>
+                <li><a href="#">09355067453</a></li>
+            </div>
+            <div class="contact-icons">
+                <a href="#"><i class='bx bxl-facebook' onclick="fb()"></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="">
+                <input type="" placeholder="Enter Your Name" required>
+                <input type="email" placeholder="Enter Your Email" required>
+                <input type="" placeholder="Enter Your Subject">
+                <textarea name="" id="" cols="40" rows="10" placeholder="Enter Your Message" required></textarea>
+                <input type="submit" value="Submit" class="send">
+            </form>
+        </div>
+     </section>
+
+     <div class="last-text">
+        <p>© Developed 2025 by Domingo Delos Angeles B. Anam</p>
+     </div>
+
+
+     <!--scroll top-->
+
+     <a href="#" class="top"><i class='bx bx-chevron-up-circle' ></i></i></a>
+
+
+     <!--sustom scrollreveal link-->
+
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--custom js link-->
+    <script type="text/javascript" src="function.js"></script>
+    
+</body>
+</html>
